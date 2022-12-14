@@ -3,9 +3,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_lab_4/entity/Shop.dart';
 import 'package:readmore/readmore.dart';
-import 'package:flutter_lab_4/model/catedories.dart';
-import 'package:flutter_lab_4/model/products.dart';
-import 'package:flutter_lab_4/model/readJsonData.dart';
 
 class SecondScreen extends StatelessWidget {
   Shop items;
@@ -152,12 +149,60 @@ class SecondScreen extends StatelessWidget {
                   "Reviews",
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
                 ),
-                TextButton.icon(
-                  onPressed: () => {},
-                  icon: Icon(null),
-                  label: Text("Write your"),
+                TextButton(
+                  onPressed: () {},
+                  style: TextButton.styleFrom(
+                    textStyle: TextStyle(
+                      color: Color.fromARGB(255, 0, 197, 105),
+                    ),
+                  ),
+                  child: Text("Write your"),
                 ),
-                //TODO: Add Bottom Bar (Pret '$...' si Butonul 'ADD')
+                SizedBox(height: 70),
+                Container(
+                  height: 50,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.3),
+                        spreadRadius: -5,
+                        blurRadius: 20,
+                        offset: Offset(0, -10),
+                      ),
+                    ],
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Column(
+                        children: [
+                          SizedBox(height: 5),
+                          Text(
+                            "PRICE",
+                            style: TextStyle(
+                              color: Color.fromARGB(255, 153, 153, 153),
+                            ),
+                          ),
+                          Text(
+                            "\$ ${items.results![index].price.toString()}",
+                            style: TextStyle(
+                              color: Color.fromARGB(255, 0, 197, 105),
+                            ),
+                          ),
+                        ],
+                      ),
+                      ElevatedButton(
+                        onPressed: () {},
+                        child: Text("ADD"),
+                        style: ButtonStyle(
+                          backgroundColor:
+                              MaterialStatePropertyAll<Color>(Colors.green),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               ],
             ),
           ),

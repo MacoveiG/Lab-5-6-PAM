@@ -1,5 +1,4 @@
 // ignore_for_file: non_constant_identifier_names
-import 'package:flutter_lab_4/entity/Category.dart';
 import 'package:flutter_lab_4/entity/Results.dart';
 
 class Shop {
