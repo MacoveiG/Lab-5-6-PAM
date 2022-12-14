@@ -4,12 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_lab_4/model/catedories.dart';
 import 'package:flutter_lab_4/model/products.dart';
 import 'package:flutter_lab_4/model/readJsonData.dart';
-import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
 
 class MainScreen extends StatelessWidget {
   MainScreen({Key? key}) : super(key: key);
-
-  HomePageController homePageController = Get.put(HomePageController());
 
   @override
   Widget build(BuildContext context) {

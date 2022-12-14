@@ -194,11 +194,11 @@ class SecondScreen extends StatelessWidget {
                       ),
                       ElevatedButton(
                         onPressed: () {},
-                        child: Text("ADD"),
                         style: ButtonStyle(
                           backgroundColor:
                               MaterialStatePropertyAll<Color>(Colors.green),
                         ),
+                        child: Text("ADD"),
                       ),
                     ],
                   ),
